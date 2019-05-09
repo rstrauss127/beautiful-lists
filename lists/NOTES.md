@@ -27,4 +27,6 @@ lists
 items
   belongs to lists
 
+#Step 3: Add items to lists
+
 #Step whatever, Fix down arrow on Make a list  
