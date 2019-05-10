@@ -9,14 +9,17 @@ class ListsController < ApplicationController
   def show
   #params has all the data passed by a user /lists/:id
     @list = List.find(params[:id])
+    @item = @list.items.build
   end
 
   def create
-    @list = List.new(params[:list]) #mass assignment
-    @list.name = params[:list][:name]
-    @list.save
-
-    redirect_to list_url(@list)
+    @list = List.new(list_params) #mass assignment
+    if @list.save
+      redirect_to list_url(@list)
+    else
+      @lists = List.all
+      render :index
+    end
   end
 
   private
