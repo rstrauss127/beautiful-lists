@@ -57,4 +57,9 @@ items
 Validate that lists have names
 Validate the items have descriptions
 
+#Step 5: I want to add state (complete/incomplete) to Items in a List
+- Marking items as complete or incomplete
+
+#Step 6: Deleting Items from a list
+
 #Step whatever, Fix down arrow on Make a list  
