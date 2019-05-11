@@ -60,6 +60,25 @@ Validate the items have descriptions
 #Step 5: I want to add state (complete/incomplete) to Items in a List
 - Marking items as complete or incomplete
 
+What URLS do i need and how might my database change?
+
+-the idea of an item being complete or incomplete requires data.
+
+-now forms for updating the status of an item - which means new URL
+
+/lists/1/items
+  PUT/PATCH  /lists/1/items/1 updating Item 1 in List 1
+  PUT/PATCH /lists/:list_id/items/:id
+HTML
+<input class="toggle" type="checkbox">
+
+I need that JS function to submit the form when you click the checkbox
+$(function()) {
+  $("input.toggle").on("change", function()){
+    $(this).parents("form").trigger("submit")
+  }
+}
+
 #Step 6: Deleting Items from a list
 
 #Step whatever, Fix down arrow on Make a list  

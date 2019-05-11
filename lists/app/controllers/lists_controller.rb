@@ -9,7 +9,7 @@ class ListsController < ApplicationController
   def show
   #params has all the data passed by a user /lists/:id
     @list = List.find(params[:id])
-    @item = @list.items.build
+    @item = Item.new
   end
 
   def create
